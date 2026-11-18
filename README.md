@@ -19,8 +19,10 @@ All figures use simulated Kenyan-shilling assumptions, so the app is a working d
 - **Python 3.12**
 - **Streamlit 1.65** — page routing via `st.navigation`, widgets, caching
 - **Plotly 7** — themed interactive charts
-- **pandas 2.x / NumPy 1.x** — data handling and the forecast/statistics math
+- **pandas 3.1 / NumPy 2.5** — data handling and the forecast/statistics math
 - **SQLite** — embedded local database, no server required
+
+The pins in `requirements.txt` are chosen to have prebuilt wheels for Python 3.14, which Streamlit Cloud uses. Older pins such as pandas 2.2 / NumPy 1.26 have no Python 3.14 wheels and fail during installation.
 
 ## Quick start
 
