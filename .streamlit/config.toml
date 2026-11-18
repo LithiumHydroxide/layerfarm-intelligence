@@ -1,0 +1,23 @@
+[theme]
+# Primary accent color (Emerald Green for the "Agri/Tech" feel)
+primaryColor = "#10B981"
+
+# Background color (Deep, sleek dark mode)
+backgroundColor = "#0F172A"
+
+# Secondary background (For cards and sidebars - slightly lighter)
+secondaryBackgroundColor = "#1E293B"
+
+# Text color (Soft white for readability)
+textColor = "#F8FAFC"
+
+# Font (Clean, modern sans-serif)
+font = "sans serif"
+
+[server]
+# Run on a specific port
+port = 8501
+
+[browser]
+# Disable the ugly "running man" spinner in the top right
+gatherUsageStats = false

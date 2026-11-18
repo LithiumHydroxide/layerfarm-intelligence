@@ -1,0 +1,202 @@
+/* =========================================
+   LAYERFARM INTELLIGENCE - IMMACULATE THEME
+   ========================================= */
+
+/* Hide default Streamlit hamburger menu and footer for a clean SaaS look */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+
+/* Global Typography & Smoothness */
+html, body, [class*="css"] {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Glassmorphic Metric Cards */
+.glass-card {
+    background: rgba(30, 41, 59, 0.55); /* Slate 800 with opacity */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #10B981, #34D399); /* Emerald gradient */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(16, 185, 129, 0.3);
+    box-shadow: 0 12px 40px 0 rgba(16, 185, 129, 0.15);
+}
+
+.glass-card:hover::before {
+    opacity: 1;
+}
+
+.card-title {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #94A3B8; /* Slate 400 */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+}
+
+.card-value {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #F8FAFC; /* Slate 50 */
+    line-height: 1.2;
+    margin: 0;
+}
+
+.card-subtext {
+    font-size: 0.85rem;
+    color: #10B981; /* Emerald 500 for positive trends */
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+.card-subtext.negative {
+    color: #EF4444; /* Red 500 for negative trends */
+}
+
+/* Custom Section Headers */
+.section-header {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #F8FAFC;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Plotly Chart Containers */
+.js-plotly-plot .plotly .modebar {
+    display: none !important; /* Hide plotly toolbar for cleaner look */
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0F172A;
+}
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
+
+/* Navigation: let st.navigation render the page list, then theme it */
+[data-testid="stSidebarNav"] {
+    padding-top: 8px !important;
+}
+
+[data-testid="stSidebarNav"] a {
+    border-radius: 10px !important;
+    margin-bottom: 4px;
+}
+
+.brand-block {
+    text-align: center;
+    padding: 12px 0 24px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+}
+
+.brand-egg {
+    font-size: 2.4rem;
+    margin-bottom: 4px;
+}
+
+.brand-name {
+    color: #F8FAFC;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.brand-tagline {
+    color: #10B981;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    margin-top: 4px;
+}
+
+.nav-caption {
+    color: #64748B;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    margin-bottom: 10px;
+}
+
+[data-testid="stSidebar"] [data-testid="stPageLink"] {
+    border-radius: 10px;
+    margin-bottom: 4px;
+}
+
+/* Hero and page headings */
+.hero {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.16), rgba(15, 23, 42, 0));
+    border: 1px solid rgba(16, 185, 129, 0.18);
+    border-radius: 20px;
+    padding: 36px;
+    margin-bottom: 28px;
+}
+
+.hero h1 {
+    color: #F8FAFC;
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    letter-spacing: -0.02em;
+}
+
+.hero p {
+    color: #CBD5E1;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.page-heading h1 {
+    color: #F8FAFC;
+    margin: 0 0 6px 0;
+    font-weight: 700;
+}
+
+.page-heading p {
+    color: #94A3B8;
+    margin: 0 0 26px 0;
+}
+
+.insight-card {
+    border-left: 4px solid #10B981;
+}
+
+@media (max-width: 900px) {
+    .hero { padding: 24px; }
+    .hero h1 { font-size: 2rem; }
+}
